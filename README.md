@@ -1,109 +1,142 @@
-class CarWashSystem:
-    def __init__(self):
-        # Define available services and their prices
-        self.packages = {
-            1: {"name": "Basic Wash (Exterior Only)", "price": 10.00},
-            2: {"name": "Standard Wash (Exterior + Interior)", "price": 20.00},
-            3: {"name": "Premium Wash (Full Detail + Wax)", "price": 35.00}
-        }
-        
-        self.addons = {
-            1: {"name": "Tire Shine", "price": 5.00},
-            2: {"name": "Rain Repellent Windshield", "price": 7.00},
-            3: {"name": "Fragrance/Air Freshener", "price": 3.00}
-        }
-        
-        self.queue = []
 
-    def display_menu(self):
-        print("\n" + "="*40)
-        print("      WELCOME TO PYTHON CAR WASH      ")
-        print("="*40)
-        print("Please choose a wash package:")
-        for key, pkg in self.packages.items():
-            print(f"  [{key}] {pkg['name']} - ${pkg['price']:.2f}")
 
-    def display_addons(self):
-        print("\nOptional Add-ons:")
-        print("  [0] None / Done selecting")
-        for key, addon in self.addons.items():
-            print(f"  [{key}] {addon['name']} - ${addon['price']:.2f}")
+def tutorial_system():
+    print("=== Welcome to the Tutorial Quiz System ===")
+    print("Choose a subject:")
+    print("1. Python Basics")
+    print("2. Mathematics")
+    print("3. Science")
 
-    def start(self):
-        while True:
-            self.display_menu()
-            try:
-                choice = int(input("\nEnter package number (or 0 to exit): "))
-                if choice == 0:
-                    print("\nThank you for visiting Python Car Wash. Goodbye!")
-                    break
-                
-                if choice not in self.packages:
-                    print("\n[Error] Invalid choice. Please select 1, 2, or 3.")
-                    continue
+    try:
+        choice = int(input("Enter your choice (1-3): "))
+    except ValueError:
+        print("Invalid input. Please enter a number between 1 and 3.")
+        return
 
-                # Get package details
-                selected_package = self.packages[choice]
-                total_cost = selected_package["price"]
-                invoice_items = [selected_package]
+    score = 0 
 
-                # Get add-ons
-                while True:
-                    self.display_addons()
-                    addon_choice = int(input("Select an add-on number (0 to finish): "))
-                    if addon_choice == 0:
-                        break
-                    elif addon_choice in self.addons:
-                        addon = self.addons[addon_choice]
-                        # Prevent duplicate add-ons
-                        if addon not in invoice_items:
-                            invoice_items.append(addon)
-                            total_cost += addon["price"]
-                            print(f"Added: {addon['name']}")
-                        else:
-                            print("You already added this item.")
-                    else:
-                        print("[Error] Invalid add-on choice.")
+    # Outer condition: subject selection
+    if choice == 1:
+        print("\n--- Python Basics Tutorial ---")
+        print("Let's start the quiz! Answer with the correct option number.\n")
 
-                # Get customer info
-                customer_name = input("\nEnter customer name: ").strip()
-                car_model = input("Enter car model/plate number: ").strip()
+        # Nested quiz loop
+        for i in range(1, 6):
+            if i == 1:
+                print("Q1: Which keyword is used to define a function in Python?")
+                print("1. func\n2. def\n3. function\n4. define")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 2:
+                print("Q2: Which symbol is used for comments in Python?")
+                print("1. //\n2. #\n3. /* */\n4. <!-- -->")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 3:
+                print("Q3: Which data type is used for decimal numbers?")
+                print("1. int\n2. float\n3. str\n4. bool")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 4:
+                print("Q4: Which function is used to get user input?")
+                print("1. input()\n2. read()\n3. scan()\n4. get()")
+                ans = input("Your answer: ")
+                if ans == "1":
+                    score += 1
+            elif i == 5:
+                print("Q5: Which keyword is used for conditional branching?")
+                print("1. if\n2. elif\n3. else\n4. All of the above")
+                ans = input("Your answer: ")
+                if ans == "4":
+                    score += 1
 
-                # Add to queue
-                order_summary = {
-                    "name": customer_name,
-                    "car": car_model,
-                    "items": invoice_items,
-                    "total": total_cost
-                }
-                self.queue.append(order_summary)
+    elif choice == 2:
+        print("\n--- Mathematics Tutorial ---")
+        print("Let's start the quiz!\n")
 
-                # Print Receipt / Ticket
-                print("\n" + "-"*40)
-                print("           CAR WASH TICKET            ")
-                print("-"*40)
-                print(f"Customer : {customer_name}")
-                print(f"Vehicle  : {car_model}")
-                print("\nSelected Services:")
-                for item in invoice_items:
-                    print(f" - {item['name']} (${item['price']:.2f})")
-                print("-" * 40)
-                print(f"TOTAL DUE: ${total_cost:.2f}")
-                print("-"*40)
-                print(f"Status: Added to queue. Position: {len(self.queue)}")
-                print("Please drive your car to the wash bay!\n")
+        for i in range(1, 6):
+            if i == 1:
+                print("Q1: What is 5 + 3?")
+                print("1. 7\n2. 8\n3. 9\n4. 10")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 2:
+                print("Q2: What is the square root of 16?")
+                print("1. 2\n2. 4\n3. 8\n4. 16")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 3:
+                print("Q3: What is 10 / 2?")
+                print("1. 4\n2. 5\n3. 6\n4. 8")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 4:
+                print("Q4: What is 7 * 6?")
+                print("1. 42\n2. 36\n3. 48\n4. 40")
+                ans = input("Your answer: ")
+                if ans == "1":
+                    score += 1
+            elif i == 5:
+                print("Q5: What is 15 - 9?")
+                print("1. 5\n2. 6\n3. 7\n4. 8")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
 
-                cont = input("Process another car? (y/n): ").strip().lower()
-                if cont != 'y':
-                    print("\nCurrent Queue Summary:")
-                    for i, job in enumerate(self.queue, 1):
-                        print(f" {i}. {job['name']} ({job['car']}) - Total: ${job['total']:.2f}")
-                    print("\nThank you for using the system!")
-                    break
+    elif choice == 3:
+        print("\n--- Science Tutorial ---")
+        print("Let's start the quiz!\n")
 
-            except ValueError:
-                print("\n[Error] Please enter a valid number.")
+        for i in range(1, 6):
+            if i == 1:
+                print("Q1: What planet is known as the Red Planet?")
+                print("1. Earth\n2. Mars\n3. Jupiter\n4. Venus")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 2:
+                print("Q2: What gas do plants produce during photosynthesis?")
+                print("1. Oxygen\n2. Carbon Dioxide\n3. Nitrogen\n4. Hydrogen")
+                ans = input("Your answer: ")
+                if ans == "1":
+                    score += 1
+            elif i == 3:
+                print("Q3: What is H2O commonly known as?")
+                print("1. Water\n2. Hydrogen Peroxide\n3. Salt\n4. Oxygen")
+                ans = input("Your answer: ")
+                if ans == "1":
+                    score += 1
+            elif i == 4:
+                print("Q4: Which organ pumps blood in the human body?")
+                print("1. Brain\n2. Heart\n3. Lungs\n4. Liver")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
+            elif i == 5:
+                print("Q5: What force keeps us on the ground?")
+                print("1. Magnetism\n2. Gravity\n3. Friction\n4. Inertia")
+                ans = input("Your answer: ")
+                if ans == "2":
+                    score += 1
 
-if __name__ == "__main__":
-    car_wash = CarWashSystem()
-    car_wash.start()
+    else:
+        print("Invalid choice. Please restart and choose between 1-3.")
+        return
+
+    # Final score display
+    print(f"\nYour score: {score}/5")
+    if score == 5:
+        print("Excellent! You got all correct.")
+    elif score >= 3:
+        print("Good job! You passed.")
+    else:
+        print("Keep practicing! You can do better.")
+
+# Run the system
+tutorial_system()
