@@ -1,9 +1,3 @@
-# ==============================================================================
-# PYTHON TUTORIAL & CURRICULUM SYSTEM
-# Strictly using loops, if, elif, else, and nested conditions.
-# Every lesson has a customized mini-game specifically for that topic!
-# ==============================================================================
-
 print("==================================================")
 print("   WELCOME TO THE COMPLETE PYTHON TUTORIAL SYSTEM ")
 print("==================================================")
@@ -81,7 +75,7 @@ while system_running:
                 print("Python variable assignment uses the '=' operator. Names cannot start")
                 print("with numbers and are case-sensitive.")
                 print("[Example Code]:")
-                print("   school_name = 'STI College'")
+                print("   school_name = 'Clark College Of Science And Technology'")
                 print("   student_age = 18")
                 
                 play = input("\nDo you want to play the mini-game for Lesson 2? (yes/no): ")
