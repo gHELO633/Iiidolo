@@ -1,5 +1,5 @@
 print("==================================================")
-print("   WELCOME TO THE COMPLETE PYTHON TUTORIAL SYSTEM ")
+print("*****************PYTHON TUTORIAL******************")
 print("==================================================")
 
 count = True
@@ -14,18 +14,15 @@ while count:
     print("==================================================")
     
     quarter_choice = input("Enter option (1-4): ")
-    
-    # ==========================================================================
-    # PRELIM QUARTER
-    # ==========================================================================
+
+  
     if quarter_choice == "1":
         prelim_active = True
         current_lesson = 1
         
         while prelim_active:
-            # ------------------------------------------------------------------
-            # PRELIM LESSON 1: Intro to Computers & Python
-            # ------------------------------------------------------------------
+
+          
             if current_lesson == 1:
                 print("\n--------------------------------------------------")
                 print("PRELIM - LESSON 1: Introduction to Computers & Python")
@@ -58,15 +55,13 @@ while count:
                 if next_action == "1":
                     current_lesson = 2
                 elif next_action == "2":
-                    current_lesson = 5  # Jump to Quiz
+                    current_lesson = 5  
                 elif next_action == "3":
                     prelim_active = False
                 else:
                     prelim_active = False
 
-            # ------------------------------------------------------------------
-            # PRELIM LESSON 2: Variables and Syntax Rules
-            # ------------------------------------------------------------------
+            
             elif current_lesson == 2:
                 print("\n--------------------------------------------------")
                 print("PRELIM - LESSON 2: Variables & Syntax Rules")
@@ -105,9 +100,7 @@ while count:
                 else:
                     prelim_active = False
 
-            # ------------------------------------------------------------------
-            # PRELIM LESSON 3: Python Data Types
-            # ------------------------------------------------------------------
+            
             elif current_lesson == 3:
                 print("\n--------------------------------------------------")
                 print("PRELIM - LESSON 3: Python Data Types")
@@ -147,9 +140,7 @@ while count:
                 else:
                     prelim_active = False
 
-            # ------------------------------------------------------------------
-            # PRELIM LESSON 4: Basic Arithmetic Operators
-            # ------------------------------------------------------------------
+       
             elif current_lesson == 4:
                 print("\n--------------------------------------------------")
                 print("PRELIM - LESSON 4: Basic Arithmetic Operators")
@@ -182,9 +173,7 @@ while count:
                 else:
                     prelim_active = False
 
-            # ------------------------------------------------------------------
-            # PRELIM QUIZ (5 Questions)
-            # ------------------------------------------------------------------
+       
             elif current_lesson == 5:
                 print("\n--------------------------------------------------")
                 print("PRELIM QUIZ (5 Questions)")
@@ -224,17 +213,13 @@ while count:
                 print("\nQUIZ FINISHED! Your Prelim Score:", score, "/5")
                 prelim_active = False
 
-    # ==========================================================================
-    # MIDTERM QUARTER
-    # ==========================================================================
+    
     elif quarter_choice == "2":
         midterm_active = True
         current_lesson = 1
         
         while midterm_active:
-            # ------------------------------------------------------------------
-            # MIDTERM LESSON 1: If, Elif, Else
-            # ------------------------------------------------------------------
+
             if current_lesson == 1:
                 print("\n--------------------------------------------------")
                 print("MIDTERM - LESSON 1: Conditional Statements (if, elif, else)")
@@ -279,9 +264,7 @@ while count:
                 else:
                     midterm_active = False
 
-            # ------------------------------------------------------------------
-            # MIDTERM LESSON 2: Nested Conditions
-            # ------------------------------------------------------------------
+        
             elif current_lesson == 2:
                 print("\n--------------------------------------------------")
                 print("MIDTERM - LESSON 2: Nested Conditions")
@@ -320,9 +303,6 @@ while count:
                 else:
                     midterm_active = False
 
-            # ------------------------------------------------------------------
-            # MIDTERM QUIZ (5 Questions)
-            # ------------------------------------------------------------------
             elif current_lesson == 3:
                 print("\n--------------------------------------------------")
                 print("MIDTERM QUIZ (5 Questions)")
@@ -362,17 +342,13 @@ while count:
                 print("\nQUIZ FINISHED! Your Midterm Score:", score, "/5")
                 midterm_active = False
 
-    # ==========================================================================
-    # FINALS QUARTER
-    # ==========================================================================
+   
     elif quarter_choice == "3":
         finals_active = True
         current_lesson = 1
         
         while finals_active:
-            # ------------------------------------------------------------------
-            # FINALS LESSON 1: While Loops
-            # ------------------------------------------------------------------
+            
             if current_lesson == 1:
                 print("\n--------------------------------------------------")
                 print("FINALS - LESSON 1: While Loops")
@@ -412,9 +388,7 @@ while count:
                 else:
                     finals_active = False
 
-            # ------------------------------------------------------------------
-            # FINALS LESSON 2: For Loops & range()
-            # ------------------------------------------------------------------
+            
             elif current_lesson == 2:
                 print("\n--------------------------------------------------")
                 print("FINALS - LESSON 2: For Loops & range()")
@@ -449,9 +423,7 @@ while count:
                 else:
                     finals_active = False
 
-            # ------------------------------------------------------------------
-            # FINALS QUIZ (5 Questions)
-            # ------------------------------------------------------------------
+            
             elif current_lesson == 3:
                 print("\n--------------------------------------------------")
                 print("FINALS QUIZ (5 Questions)")
@@ -491,9 +463,7 @@ while count:
                 print("\nQUIZ FINISHED! Your Finals Score:", score, "/5")
                 finals_active = False
 
-    # ==========================================================================
-    # EXIT OPTION
-    # ==========================================================================
+    
     elif quarter_choice == "4":
         print("\nThank you for using the Python Tutorial System! Keep coding!")
         count = False
