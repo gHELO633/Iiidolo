@@ -1,5 +1,7 @@
+
 # ==============================================================================
-# PYTHON TUTORIAL SYSTEM (Strictly using loops, if, elif, else, nested conditions)
+# PYTHON TUTORIAL SYSTEM
+# Strictly using loops, if, elif, else, and nested conditions.
 # ==============================================================================
 
 print("=========================================")
@@ -9,17 +11,19 @@ print("=========================================")
 system_running = True
 
 while system_running:
-    print("\nSELECT A QUARTER TO STUDY:")
+    print("\n=========================================")
+    print("SELECT A QUARTER TO STUDY:")
     print("[1] Prelim (Basics, Data Types, Operators)")
     print("[2] Midterm (If, Elif, Else, Nested Conditions)")
     print("[3] Finals (While Loops, For Loops, Range)")
     print("[4] Exit System")
+    print("=========================================")
     
     quarter_choice = input("Enter option (1-4): ")
     
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     # PRELIM QUARTER
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     if quarter_choice == "1":
         prelim_active = True
         while prelim_active:
@@ -33,7 +37,9 @@ while system_running:
             choice = input("Choose an option (1-5): ")
             
             if choice == "1":
-                print("\n--- LESSON 1: Print Statement & Syntax ---")
+                print("\n-----------------------------------------")
+                print("LESSON 1: Print Statement & Syntax")
+                print("-----------------------------------------")
                 print("The print() function outputs text or values to the console.")
                 print("EXAMPLE:")
                 print("   print('Hello, Python!')")
@@ -50,8 +56,10 @@ while system_running:
                         print("Incorrect. The correct answer is 'print'.")
                         
             elif choice == "2":
-                print("\n--- LESSON 2: Data Types & Variables ---")
-                print("Python has string, int, float, and boolean data types.")
+                print("\n-----------------------------------------")
+                print("LESSON 2: Data Types & Variables")
+                print("-----------------------------------------")
+                print("Python supports string, int, float, and boolean data types.")
                 print("EXAMPLE:")
                 print("   age = 18")
                 print("   name = 'Alex'")
@@ -68,7 +76,9 @@ while system_running:
                         print("Incorrect. The assignment operator is '='.")
                         
             elif choice == "3":
-                print("\n--- LESSON 3: Basic Arithmetic Operators ---")
+                print("\n-----------------------------------------")
+                print("LESSON 3: Basic Arithmetic Operators")
+                print("-----------------------------------------")
                 print("Operators: + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus)")
                 print("EXAMPLE:")
                 print("   result = 10 % 3  # Output is 1")
@@ -85,7 +95,9 @@ while system_running:
                         print("Incorrect. The modulus operator is '%'.")
                         
             elif choice == "4":
-                print("\n--- PRELIM QUIZ (5 Questions) ---")
+                print("\n-----------------------------------------")
+                print("PRELIM QUIZ (5 Questions)")
+                print("-----------------------------------------")
                 score = 0
                 
                 print("\n1. Which function is used to display text on screen?")
@@ -118,16 +130,16 @@ while system_running:
                 if ans == "c":
                     score = score + 1
                     
-                print("QUIZ FINISHED! Your Prelim Score:", score, "/5")
+                print("\nQUIZ FINISHED! Your Prelim Score:", score, "/5")
                 
             elif choice == "5":
                 prelim_active = False
             else:
                 print("Invalid choice! Please try again.")
 
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     # MIDTERM QUARTER
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     elif quarter_choice == "2":
         midterm_active = True
         while midterm_active:
@@ -140,8 +152,10 @@ while system_running:
             choice = input("Choose an option (1-4): ")
             
             if choice == "1":
-                print("\n--- LESSON 1: Conditional Statements (if, elif, else) ---")
-                print("Conditionals execute code depending on truth values.")
+                print("\n-----------------------------------------")
+                print("LESSON 1: Conditional Statements (if, elif, else)")
+                print("-----------------------------------------")
+                print("Conditionals execute code blocks based on logical criteria.")
                 print("EXAMPLE:")
                 print("   age = 18")
                 print("   if age >= 18:")
@@ -167,7 +181,9 @@ while system_running:
                         print("Incorrect. The keyword is 'elif'.")
 
             elif choice == "2":
-                print("\n--- LESSON 2: Nested Conditions ---")
+                print("\n-----------------------------------------")
+                print("LESSON 2: Nested Conditions")
+                print("-----------------------------------------")
                 print("Nested conditions are 'if' statements placed inside other 'if' statements.")
                 print("EXAMPLE:")
                 print("   has_id = True")
@@ -191,7 +207,9 @@ while system_running:
                         print("Incorrect. The keyword is 'if'.")
                         
             elif choice == "3":
-                print("\n--- MIDTERM QUIZ (5 Questions) ---")
+                print("\n-----------------------------------------")
+                print("MIDTERM QUIZ (5 Questions)")
+                print("-----------------------------------------")
                 score = 0
                 
                 print("\n1. Which keyword starts a conditional check?")
@@ -207,7 +225,7 @@ while system_running:
                     score = score + 1
                     
                 print("\n3. When does the 'else' block execute?")
-                print("a) Always  b) When previous are False  c) When previous are True")
+                print("a) Always  b) When previous conditions are False  c) When previous conditions are True")
                 ans = input("Answer: ")
                 if ans == "b":
                     score = score + 1
@@ -224,16 +242,16 @@ while system_running:
                 if ans == "a":
                     score = score + 1
                     
-                print("QUIZ FINISHED! Your Midterm Score:", score, "/5")
+                print("\nQUIZ FINISHED! Your Midterm Score:", score, "/5")
                 
             elif choice == "4":
                 midterm_active = False
             else:
                 print("Invalid choice! Please try again.")
 
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     # FINALS QUARTER
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     elif quarter_choice == "3":
         finals_active = True
         while finals_active:
@@ -246,7 +264,9 @@ while system_running:
             choice = input("Choose an option (1-4): ")
             
             if choice == "1":
-                print("\n--- LESSON 1: While Loops ---")
+                print("\n-----------------------------------------")
+                print("LESSON 1: While Loops")
+                print("-----------------------------------------")
                 print("A while loop repeats code as long as its condition remains True.")
                 print("EXAMPLE:")
                 print("   count = 1")
@@ -268,7 +288,9 @@ while system_running:
                         print("Incorrect. The keyword is 'while'.")
 
             elif choice == "2":
-                print("\n--- LESSON 2: For Loops & range() ---")
+                print("\n-----------------------------------------")
+                print("LESSON 2: For Loops & range()")
+                print("-----------------------------------------")
                 print("For loops iterate over sequences or number ranges using range().")
                 print("EXAMPLE:")
                 print("   for i in range(3):")
@@ -288,7 +310,9 @@ while system_running:
                         print("Incorrect. The function is 'range'.")
                         
             elif choice == "3":
-                print("\n--- FINALS QUIZ (5 Questions) ---")
+                print("\n-----------------------------------------")
+                print("FINALS QUIZ (5 Questions)")
+                print("-----------------------------------------")
                 score = 0
                 
                 print("\n1. Which loop runs as long as a condition is True?")
@@ -321,18 +345,18 @@ while system_running:
                 if ans == "a":
                     score = score + 1
                     
-                print("QUIZ FINISHED! Your Finals Score:", score, "/5")
+                print("\nQUIZ FINISHED! Your Finals Score:", score, "/5")
                 
             elif choice == "4":
                 finals_active = False
             else:
                 print("Invalid choice! Please try again.")
 
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     # EXIT OPTION
-    # ----------------------------------------------------------------------
+    # ==========================================================================
     elif quarter_choice == "4":
-        print("Thank you for using the Python Tutorial System! Goodbye!")
+        print("\nThank you for using the Python Tutorial System! Goodbye!")
         system_running = False
     else:
-        print("Invalid choice! Please enter 1, 2, 3, or 4.")
+        print("\nInvalid choice! Please enter 1, 2, 3, or 4.")
