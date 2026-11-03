@@ -1,6 +1,7 @@
 # ==============================================================================
 # PYTHON TUTORIAL & CURRICULUM SYSTEM
 # Strictly using loops, if, elif, else, and nested conditions.
+# Every lesson has a customized mini-game specifically for that topic!
 # ==============================================================================
 
 print("==================================================")
@@ -12,7 +13,7 @@ system_running = True
 while system_running:
     print("\n==================================================")
     print("SELECT A QUARTER / MODULE TO STUDY:")
-    print("[1] Prelim (Intro to Computers, Variables, Data Types, Operators)")
+    print("[1] Prelim (Intro, Syntax, Variables, Data Types, Operators)")
     print("[2] Midterm (Conditionals: If, Elif, Else & Nested Conditions)")
     print("[3] Finals (Loops: While Loops, For Loops & range())")
     print("[4] Exit System")
@@ -44,9 +45,10 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 1? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Complete the code to display 'Hello Computer'.")
-                    print("Code: ____('Hello Computer')")
+                    print("\n--- LESSON 1 MINI-GAME: Fill in the Missing Output Code ---")
+                    print("Topic: Python Output Syntax")
+                    print("Task: Complete the code to output 'Python is Awesome!'.")
+                    print("Code: ____('Python is Awesome!')")
                     user_code = input("What goes in the blank? ")
                     if user_code == "print":
                         print("Correct! 'print' displays output to the screen.")
@@ -69,22 +71,23 @@ while system_running:
                     prelim_active = False
 
             # ------------------------------------------------------------------
-            # PRELIM LESSON 2: Variables and Syntax
+            # PRELIM LESSON 2: Variables and Syntax Rules
             # ------------------------------------------------------------------
             elif current_lesson == 2:
                 print("\n--------------------------------------------------")
                 print("PRELIM - LESSON 2: Variables & Syntax Rules")
                 print("--------------------------------------------------")
                 print("[Explanation]: A variable is a container for storing data values.")
-                print("Python has strict syntax rules: variable names cannot start with numbers")
-                print("and are case-sensitive.")
+                print("Python variable assignment uses the '=' operator. Names cannot start")
+                print("with numbers and are case-sensitive.")
                 print("[Example Code]:")
                 print("   school_name = 'STI College'")
                 print("   student_age = 18")
                 
                 play = input("\nDo you want to play the mini-game for Lesson 2? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
+                    print("\n--- LESSON 2 MINI-GAME: Variable Assignment ---")
+                    print("Topic: Storing Data in Variables")
                     print("Task: Assign the value 100 to a variable named score.")
                     print("Code: score ____ 100")
                     user_code = input("What operator goes in the blank? ")
@@ -109,7 +112,7 @@ while system_running:
                     prelim_active = False
 
             # ------------------------------------------------------------------
-            # PRELIM LESSON 3: Data Types
+            # PRELIM LESSON 3: Python Data Types
             # ------------------------------------------------------------------
             elif current_lesson == 3:
                 print("\n--------------------------------------------------")
@@ -125,12 +128,13 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 3? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Identify the data type category for text values enclosed in quotes.")
-                    print("Code: text_type = ____('Hello')")
-                    user_code = input("What data type name goes in the blank? ")
+                    print("\n--- LESSON 3 MINI-GAME: Identifying String Type ---")
+                    print("Topic: Data Types (str)")
+                    print("Task: Fill in the built-in type keyword for text data.")
+                    print("Code: my_text = ____('Hello World')")
+                    user_code = input("What data type function goes in the blank? ")
                     if user_code == "str":
-                        print("Correct! 'str' stands for string.")
+                        print("Correct! 'str' represents the string data type.")
                     else:
                         print("Incorrect. The data type name is 'str'.")
                 
@@ -150,11 +154,11 @@ while system_running:
                     prelim_active = False
 
             # ------------------------------------------------------------------
-            # PRELIM LESSON 4: Basic Operators
+            # PRELIM LESSON 4: Basic Arithmetic Operators
             # ------------------------------------------------------------------
             elif current_lesson == 4:
                 print("\n--------------------------------------------------")
-                print("PRELIM - LESSON 4: Basic Operators")
+                print("PRELIM - LESSON 4: Basic Arithmetic Operators")
                 print("--------------------------------------------------")
                 print("[Explanation]: Operators perform operations on variables and values.")
                 print("Arithmetic includes +, -, *, /, and modulus (%) which yields division remainder.")
@@ -164,14 +168,15 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 4? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Fill in the operator symbol for modulus/remainder.")
+                    print("\n--- LESSON 4 MINI-GAME: Modulus Operator ---")
+                    print("Topic: Modulus / Remainder Operator")
+                    print("Task: Fill in the missing operator symbol that calculates the division remainder.")
                     print("Code: remainder = 9 ____ 4")
-                    user_code = input("What operator goes in the blank? ")
+                    user_code = input("What operator symbol goes in the blank? ")
                     if user_code == "%":
                         print("Correct! '%' is the modulus operator.")
                     else:
-                        print("Incorrect. The operator is '%'.")
+                        print("Incorrect. The modulus operator is '%'.")
                 
                 print("\nWhat would you like to do next?")
                 print("[1] Take Prelim Quiz")
@@ -253,13 +258,14 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 1? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Fill in the keyword used for alternate conditions.")
+                    print("\n--- LESSON 1 MINI-GAME: Alternate Condition Checking ---")
+                    print("Topic: If/Elif/Else Syntax")
+                    print("Task: Fill in the keyword used for checking an alternate condition.")
                     print("Code:")
-                    print("   if x > 10:")
-                    print("       print('Big')")
-                    print("   ____ x == 10:")
-                    print("       print('Equal')")
+                    print("   if score > 90:")
+                    print("       print('A')")
+                    print("   ____ score > 80:")
+                    print("       print('B')")
                     user_code = input("What keyword goes in the blank? ")
                     if user_code == "elif":
                         print("Correct! 'elif' checks secondary conditions.")
@@ -297,15 +303,16 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 2? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Complete the inner nested condition keyword.")
+                    print("\n--- LESSON 2 MINI-GAME: Inner Condition Check ---")
+                    print("Topic: Nested If Statements")
+                    print("Task: Fill in the inner condition keyword to check admin status.")
                     print("Code:")
-                    print("   if logged_in:")
+                    print("   if is_user:")
                     print("       ____ is_admin:")
-                    print("           print('Panel Access')")
+                    print("           print('Welcome Admin')")
                     user_code = input("What keyword goes in the blank? ")
                     if user_code == "if":
-                        print("Correct! 'if' starts the nested inner check.")
+                        print("Correct! 'if' initiates the nested inner condition.")
                     else:
                         print("Incorrect. The keyword is 'if'.")
                 
@@ -386,11 +393,12 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 1? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Fill in the loop keyword that repeats while True.")
+                    print("\n--- LESSON 1 MINI-GAME: Conditional Loop Header ---")
+                    print("Topic: While Loop Mechanics")
+                    print("Task: Fill in the loop keyword that repeats code while a condition is True.")
                     print("Code:")
-                    print("   ____ x < 5:")
-                    print("       x = x + 1")
+                    print("   ____ count < 5:")
+                    print("       count = count + 1")
                     user_code = input("What keyword goes in the blank? ")
                     if user_code == "while":
                         print("Correct! 'while' creates a conditional loop.")
@@ -425,14 +433,15 @@ while system_running:
                 
                 play = input("\nDo you want to play the mini-game for Lesson 2? (yes/no): ")
                 if play == "yes" or play == "y":
-                    print("\n--- MINI-GAME: Fill in the Missing Code ---")
-                    print("Task: Fill in the missing function used to generate numeric ranges.")
+                    print("\n--- LESSON 2 MINI-GAME: Sequence Generation ---")
+                    print("Topic: For Loop & Range Function")
+                    print("Task: Fill in the function used to generate numeric sequences in for loops.")
                     print("Code:")
                     print("   for i in ____(5):")
                     print("       print(i)")
-                    user_code = input("What function goes in the blank? ")
+                    user_code = input("What function name goes in the blank? ")
                     if user_code == "range":
-                        print("Correct! range() generates number sequences.")
+                        print("Correct! 'range' generates number sequences.")
                     else:
                         print("Incorrect. The function name is 'range'.")
                 
