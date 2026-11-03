@@ -2,9 +2,9 @@ print("==================================================")
 print("   WELCOME TO THE COMPLETE PYTHON TUTORIAL SYSTEM ")
 print("==================================================")
 
-system_running = True
+count = True
 
-while system_running:
+while count:
     print("\n==================================================")
     print("SELECT A QUARTER / MODULE TO STUDY:")
     print("[1] Prelim (Intro, Syntax, Variables, Data Types, Operators)")
@@ -496,6 +496,6 @@ while system_running:
     # ==========================================================================
     elif quarter_choice == "4":
         print("\nThank you for using the Python Tutorial System! Keep coding!")
-        system_running = False
+        count = False
     else:
         print("\nInvalid choice! Please select an option between 1 and 4.")
