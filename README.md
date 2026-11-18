@@ -115,7 +115,7 @@ while count:
                 print("  - Indentation is mandatory; it defines code blocks.")
                 print("  - Example: if age >= 18: print('Adult')")
                 print("• Code Comments:")
-                print("  - Written using '#' for single-line notes.")
+                print("  - Written using ' ' for single-line notes.")
 
                 play = input("\nDo you want to play the mini-game for Lesson 2? (yes/no): ").lower()
                 if play in ["yes", "y"]:
@@ -251,9 +251,9 @@ while count:
                     score += 1
 
                 print("\n5. Which symbol is used for single-line comments in Python?")
-                print("a) #  b) //  c) /*")
+                print("a)  b) //  c) /*")
                 ans = input("Answer: ").lower()
-                if ans == "a":
+                if ans == "":
                     score += 1
 
                 print("\n--------------------------------------------------")
@@ -583,8 +583,7 @@ while count:
         print(f"Thank you for using my Python Tutorial System🫶🏻, {student_name}!")
         print("    ^.^Keep practicing and happy coding💪🏻!^.^       ")
         print("====================================================")
-        count = False
+        break
 
     else:
-        print("\n⚠️ Invalid choice! Please select  between 1 and 5 ONLY.")
-    
+        print("\n⚠️ Invalid choice! Please select between 1 and 5 ONLY.")
